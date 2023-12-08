@@ -1,0 +1,21 @@
+public boolean add(E element) - O(1)
+
+public void clear() - O(1)
+
+public boolean add(int index, E element) - O (n)
+
+private Node<E> getNodeByIndex(int index) - O (n)
+
+private void checkIndex(int index) - O (1)
+
+public E get(int index) - O (n)
+
+ public int indexOf(Object o) - O(n)
+
+ public int lastIndexOf(Object o) - O (n)
+
+ public E remove(int index) - O (n)
+
+ private E unlink(Node<E> node) - O (n)
+
+ public E set(int index, E element - O (n)

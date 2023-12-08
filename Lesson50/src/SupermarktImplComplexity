@@ -1,0 +1,15 @@
+public boolean addProduct(Product product) - O(1)
+
+public Product removeProduct(long barCode) - O(n)
+
+public Product findByBarCode(long barCode) -O(n)
+
+public Iterable<Product> findByCategory(String category) - O(n)
+
+public Iterable<Product> findByBrand(String brand) - O(n)
+
+public Iterable<Product> findProductsWithExpiredDate() - O(n)
+
+private Iterable<Product> findByPredicate(Predicate <Product> predicate)  O(n)
+
+public int skuQuantity() - O(1)
