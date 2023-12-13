@@ -9,6 +9,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.joining;
 
 public class LibAppl {
     public static void main(String[] args) {
@@ -120,10 +121,32 @@ public class LibAppl {
         //                        reader -> reader.getBooks().size(),
         //                        reader -> reader
         //                ));
+        System.out.println("-------------------- Check Book ----------------------------------");
+        // Проверить, взял ли кто-то из читателей библиотеки какие-нибудь книги Л. Толстого.
+        boolean check = checkBook(library, "Harper Lee");
+        System.out.println(check);
 
+        System.out.println("-------------------- Groups of Users II ----------------------------");
+        Map<Integer, String> readersMap = library.getReaders().stream()
+                .filter(Reader::isSubscriber)
+                .collect(Collectors.groupingBy(r -> r.getBooks().size(),
+                        Collectors.mapping(Reader::getFio, joining(", ", "{", "}"))));
+        System.out.println(readersMap.entrySet());
 
+        System.out.println("-------------------- Groups of Users III (from Yurii Koval) ----------------------------");
+        Map<Integer, Reader> mapReader = library.getReaders().stream()
+                .collect(Collectors.toMap(
+                        reader -> reader.getBooks().size(),
+                        reader -> reader
+                ));
+        System.out.println(mapReader.entrySet());
         } // end of Main
 
-
+    private static boolean checkBook(Library library, String author) {
+        boolean match = library.getReaders().stream()
+                .flatMap(reader -> reader.getBooks().stream())
+                .anyMatch(book -> author.equals(book.getAuthor()));
+        return match;
+    }
     }// end of class
 
