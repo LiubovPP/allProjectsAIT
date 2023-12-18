@@ -11,7 +11,7 @@ public class ProgrammerAppl {
     // 2. какие языки наиболее популярны среди программистов в фирме?
     // язык программирования - сколько программистов его знают
 public static void main(String[] args) {
-    List<Programmer> programmers = getProgrammers();
+    List<Programmer> programmers = getProgrammers(); // заполняем список программистов
     System.out.println("-----------Most skilled programmers----------------");
     System.out.println("----------------------------------------");
     printSkilledProgrammers(programmers);
