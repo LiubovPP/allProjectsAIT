@@ -1,6 +1,6 @@
-package Yacht.model.dao;
+package homework.Yacht.model.dao;
 
-import Yacht.model.Yacht;
+import homework.Yacht.model.Yacht;
 
 import java.util.ArrayList;
 import java.util.List;

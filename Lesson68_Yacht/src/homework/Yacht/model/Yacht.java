@@ -1,4 +1,4 @@
-package Yacht.model;
+package homework.Yacht.model;
 
 import java.util.Objects;
 

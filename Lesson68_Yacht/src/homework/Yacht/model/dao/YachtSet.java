@@ -1,6 +1,6 @@
-package Yacht.model.dao;
+package homework.Yacht.model.dao;
 
-import Yacht.model.Yacht;
+import homework.Yacht.model.Yacht;
 
 public interface YachtSet {
     boolean addYacht(Yacht yacht);
