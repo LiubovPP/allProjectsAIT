@@ -45,6 +45,9 @@ public class Purchase implements Comparable<Purchase>{
         return products;
     }
 
+    public double calculatePurchaseCost() {
+        return 0.0;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
